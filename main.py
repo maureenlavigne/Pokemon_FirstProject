@@ -1,9 +1,30 @@
 import time
+
+# Fonctions
 def slow_writing(txt, speed=0.05):
     for c in txt:
         print(c, end="")
         time.sleep(speed)
     print()
+
+# Class
+class Pokemon:
+
+    def __init__(self, name, colour, element, size, character, smell, life_points, hook):
+        self.name = name
+        self.colour = colour
+        self.element = element
+        self.size = size
+        self.character = character
+        self.smell = smell
+        self.life_points = life_points
+        self.hook = hook
+
+    def __str__(self):
+        return f"{self.hook}, je suis {self.name} je suis {self.size} {self.colour} {self.character} {self.smell}.\nJe suis un pokémon {self.element} et j'ai {self.life_points} points de vie."
+
+# Choix des pokémons
+# Choix pokémon 1
 
 slow_writing("Bienvenue dans le PokéCenter !")
 time.sleep(1)
@@ -17,49 +38,22 @@ while choosing_pokemon:
     number = input()
 
     if number == "1":
-        name = "Salamouche"
-        colour = "orange"
-        element = "feu"
-        size = "petit"
-        character = "têtu"
-        smell = "puant"
-        life_points = 100
-        slow_writing(f"Grou grou, je suis {name} je suis {size} {colour} {character} {smell}.\n"
-                    f"Je suis un pokémon {element} et j'ai {life_points} points de vie.")
+        pokemon1 = Pokemon("Salamouche","orange","feu","petit","têtu","puant",100,"Grou grou")
+        slow_writing(str(pokemon1))
 
     elif number == "2":
-        name = "Boulbizure"
-        colour = "vert"
-        element = "terre"
-        size = "petit"
-        character = "gentil"
-        smell = "odorant"
-        life_points = 100
-        slow_writing(f"Poum poum, je suis {name} je suis {size} {colour} {character} {smell}.\n"
-                    f"Je suis un pokémon {element} et j'ai {life_points} points de vie.")
+        pokemon1 = Pokemon("Boulbizure", "vert", "terre", "petit", "gentil", "odorant", 100, "Poum poum")
+        slow_writing(str(pokemon1))
+
 
     elif number == "3":
-        name = "Cartapouce"
-        colour = "bleu"
-        element = "eau"
-        size = "petit"
-        character = "loyal"
-        smell = "rafraichissant"
-        life_points = 100
-        slow_writing(f"Glou glou, je suis {name} je suis {size} {colour} {character} {smell}.\n"
-                    f"Je suis un pokémon {element} et j'ai {life_points} points de vie.")
+        pokemon1 = Pokemon("Cartapouce", "bleu", "eau", "petit", "loyal", "rafraichissant", 100, "Glou glou")
+        slow_writing(str(pokemon1))
 
 
     else:
-        name="Bartabé"
-        colour="pourpre"
-        element="vase"
-        size="immense"
-        character="fainéant"
-        smell="nauséabond"
-        life_points=2
-        slow_writing(f"Petit malin ! Mouhahahaha ! Ploc ploc, je suis {name} je suis {size} {colour} {character} {smell}.\n"
-                    f"Je suis un pokémon {element} et j'ai {life_points} points de vie.")
+        pokemon1 = Pokemon("Bartabé", "pourpre", "vase", "immense", "fainéant", "nauséabond", 2, "Petit malin ! Mouhahahaha ! Ploc ploc")
+        slow_writing(str(pokemon1))
 
     time.sleep(1)
     slow_writing("\nVeux-tu me garder, ou m'échanger ? (pitié, garde moi s'il te plait)")
@@ -78,3 +72,5 @@ while choosing_pokemon:
         else:
             slow_writing("Tu parles français ou pas ? Allo ? JTM ou OUSTE")
 
+
+# Choix pokémon 2
